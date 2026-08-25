@@ -1,0 +1,41 @@
+{
+  "name": "@dsh-external/llm-degen-heal",
+  "version": "0.2.0",
+  "description": "检测并自愈 LLM 输出退化循环：流式碎词/熵骤降/空转仪表三信号，请求级惩罚注入（含需核心改一行项）、流中断重试、冷却幂等、dev_loop_status 诊断",
+  "private": true,
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "license": "BSD-3-Clause",
+  "peerDependencies": {
+    "@deepseek-ai/dsh-agent": ">=0.0.1-rc <2",
+    "@deepseek-ai/dsh-llm": ">=0.0.1-rc <2",
+    "@deepseek-ai/dsh-session": ">=0.0.1-rc <2",
+    "@deepseek-ai/dsh-tools": ">=0.0.1-rc <2",
+    "cordis": ">=4.0.0-rc <5",
+    "schemastery": "^3.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "typescript": "^5.9.0",
+    "tsdown": "^0.22.14"
+  },
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node tests/self-test.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "dsh": {}
+}

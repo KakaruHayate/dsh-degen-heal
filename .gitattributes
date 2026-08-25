@@ -1,0 +1,9 @@
+* text=auto
+*.sh text eol=lf
+*.ts text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+.gitignore text eol=lf
+package-lock.json text eol=lf
