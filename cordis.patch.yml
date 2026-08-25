@@ -1,0 +1,5 @@
+# llm-degen-heal bundle layer: register the degeneration self-heal plugin.
+- insert:
+    - id: llm-degen-heal
+      name: '@dsh-external/llm-degen-heal'
+      config: {}
